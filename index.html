@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="400 Gradi – Platz 3 der besten Pizzerien im Rhein-Main-Gebiet. Echte neapolitanische Pizza bei 400°C in Darmstadt und Groß-Umstadt.">
+<meta name="keywords" content="Pizza Darmstadt, Pizzeria Darmstadt, Neapolitanische Pizza Darmstadt, Pizza Napoletana Darmstadt, Italienisches Restaurant Darmstadt, 400 Gradi">
+<title>400 Gradi – Pizza Napoletana | Darmstadt & Groß-Umstadt</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+:root{--gold:#C9A84C;--red:#C0392B;--napoli:#0B3F7A;--dark:#111;--cream:#F5F0E8}
+body{font-family:'Lato',sans-serif;background:var(--dark);color:var(--cream);overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0.8rem 1.5rem;display:flex;justify-content:space-between;align-items:center;background:rgba(17,17,17,0.97);border-bottom:1px solid rgba(201,168,76,0.2);min-height:65px}
+nav img{height:48px}
+nav ul{list-style:none;display:flex;gap:2rem}
+nav a{color:var(--cream);text-decoration:none;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.3s}
+nav a:hover{color:var(--gold)}
+.nav-cta{background:var(--red);color:white!important;padding:0.5rem 1.2rem}
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('images/maradona.jpg');background-size:cover;background-position:center;filter:brightness(0.3)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(17,17,17,0.2),rgba(17,17,17,0.75))}
+.hero-content{position:relative;text-align:center;padding:2rem;animation:fadeUp 1s ease both}
+.hero-award{font-size:0.75rem;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
+.hero-logo{width:200px;margin-bottom:1.5rem;filter:drop-shadow(0 0 30px rgba(201,168,76,0.4))}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,3.5vw,2.2rem);font-style:italic;color:var(--cream);margin-bottom:2.5rem;line-height:1.5}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn{padding:0.9rem 2rem;font-size:0.8rem;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;transition:all 0.3s;font-family:'Lato',sans-serif;cursor:pointer;border:none}
+.btn-red{background:var(--red);color:white}
+.btn-red:hover{background:#a93226;transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--cream);border:1px solid var(--cream)}
+.btn-outline:hover{background:var(--cream);color:var(--dark)}
+.award-banner{background:var(--napoli);padding:0.9rem 2rem;text-align:center;font-size:0.85rem;letter-spacing:0.2em;text-transform:uppercase}
+.award-banner span{color:var(--gold);font-weight:700}
+section{padding:5rem 2rem}
+.lbl{font-size:0.7rem;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.stitle{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:1.5rem;line-height:1.2}
+.stext{font-size:1rem;line-height:1.8;color:rgba(245,240,232,0.75);max-width:580px}
+.about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:4rem;max-width:1150px;margin:0 auto;align-items:center}
+.about-img{overflow:hidden;aspect-ratio:4/5;position:relative}
+.about-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s}
+.about-img:hover img{transform:scale(1.05)}
+.about-img::after{content:'';position:absolute;inset:0;border:1px solid rgba(201,168,76,0.3);pointer-events:none}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}
+.feat{padding:1rem;border:1px solid rgba(201,168,76,0.15);background:rgba(201,168,76,0.03)}
+.feat-icon{font-size:1.4rem;margin-bottom:0.4rem}
+.feat h4{font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:0.2rem}
+.feat p{font-size:0.78rem;color:rgba(245,240,232,0.55);line-height:1.5}
+.gallery-wrap{background:#0d0d0d;padding:5rem 0}
+.gallery-head{text-align:center;padding:0 2rem 3rem}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px}
+.gitem{overflow:hidden;position:relative}
+.gitem img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s;display:block}
+.gitem:hover img{transform:scale(1.08)}
+.gitem:nth-child(1){grid-column:span 2;grid-row:span 2;aspect-ratio:1}
+.gitem:nth-child(2),.gitem:nth-child(3),.gitem:nth-child(4),.gitem:nth-child(5){aspect-ratio:1}
+.gitem:nth-child(6){grid-column:span 2;aspect-ratio:2}
+.deals-wrap{background:var(--napoli);padding:4rem 2rem;text-align:center}
+.deals-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem;max-width:750px;margin:3rem auto 0}
+.deal{background:rgba(255,255,255,0.08);padding:2rem;border:1px solid rgba(255,255,255,0.12)}
+.deal-day{font-size:0.7rem;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem}
+.deal-title{font-family:'Playfair Display',serif;font-size:1.4rem;margin-bottom:0.8rem;color:white}
+.deal-desc{font-size:0.88rem;color:rgba(255,255,255,0.7);line-height:1.6}
+.menu-wrap{max-width:980px;margin:0 auto}
+.menu-tabs{display:flex;gap:0.8rem;margin-bottom:3rem;flex-wrap:wrap}
+.mtab{padding:0.55rem 1.4rem;background:transparent;border:1px solid rgba(201,168,76,0.3);color:var(--cream);cursor:pointer;font-family:'Lato',sans-serif;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s}
+.mtab.active,.mtab:hover{background:var(--gold);color:var(--dark);border-color:var(--gold)}
+.mpanel{display:none}
+.mpanel.active{display:block}
+.mitems{columns:2;gap:2rem}
+.mitem{break-inside:avoid;margin-bottom:1.4rem;padding-bottom:1.4rem;border-bottom:1px solid rgba(201,168,76,0.1)}
+.mheader{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:0.35rem;gap:1rem}
+.mname{font-family:'Playfair Display',serif;font-size:0.98rem}
+.mprice{font-size:0.88rem;color:var(--gold);white-space:nowrap;font-weight:700}
+.mdesc{font-size:0.78rem;color:rgba(245,240,232,0.45);line-height:1.5}
+.standorte-wrap{background:#0d0d0d;padding:5rem 2rem}
+.standorte-head{text-align:center;margin-bottom:4rem}
+.standorte-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;max-width:980px;margin:0 auto}
+.scard{border:1px solid rgba(201,168,76,0.2);overflow:hidden}
+.scard-head{background:var(--napoli);padding:1.5rem 2rem}
+.scard-head2{background:#1a3a5c;padding:1.5rem 2rem}
+.scard-badge{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem}
+.scard-name{font-family:'Playfair Display',serif;font-size:1.4rem;color:white}
+.scard-body{padding:2rem}
+.irow{display:flex;gap:0.8rem;align-items:flex-start;margin-bottom:1rem}
+.iicon{font-size:1rem;min-width:1.5rem}
+.itext{font-size:0.83rem;color:rgba(245,240,232,0.7);line-height:1.6}
+.oz{font-size:0.8rem;color:rgba(245,240,232,0.6);line-height:2}
+.oz .row{display:flex;justify-content:space-between}
+.oz .closed{color:rgba(245,240,232,0.28)}
+.slinks{display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:1.5rem}
+.slink{padding:0.45rem 1rem;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border:1px solid rgba(201,168,76,0.4);color:var(--gold);transition:all 0.3s}
+.slink:hover{background:var(--gold);color:var(--dark)}
+.bestellen-wrap{background:var(--red);padding:4rem 2rem;text-align:center}
+.bestellen-wrap h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);color:white;margin-bottom:0.5rem}
+.bestellen-wrap p{color:rgba(255,255,255,0.8);margin-bottom:2.5rem}
+.dbts{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.dbt{padding:1rem 2rem;background:white;color:var(--dark);text-decoration:none;font-weight:700;font-size:0.82rem;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.3s}
+.dbt:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,0.3)}
+.review-wrap{background:var(--dark);padding:4rem 2rem;text-align:center;border-top:1px solid rgba(201,168,76,0.1)}
+.review-wrap .stars{font-size:2rem;margin-bottom:1rem}
+.review-wrap h2{font-family:'Playfair Display',serif;font-size:2rem;margin-bottom:0.5rem}
+.review-wrap p{color:rgba(245,240,232,0.55);margin-bottom:2rem}
+footer{background:#080808;padding:3rem 2rem;text-align:center;border-top:1px solid rgba(201,168,76,0.1)}
+footer img{height:55px;margin-bottom:1.5rem;opacity:0.75}
+.flinks{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.flinks a{color:rgba(245,240,232,0.35);text-decoration:none;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.3s}
+.flinks a:hover{color:var(--gold)}
+.fcopy{font-size:0.72rem;color:rgba(245,240,232,0.2)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:768px){
+  nav ul{display:none}
+  .about-wrap{grid-template-columns:1fr}
+  .features{grid-template-columns:1fr 1fr}
+  .gallery-grid{grid-template-columns:1fr 1fr}
+  .gitem:nth-child(1){grid-column:span 2}
+  .gitem:nth-child(6){grid-column:span 2}
+  .mitems{columns:1}
+  .standorte-grid{grid-template-columns:1fr}
+  .hero-btns{flex-direction:column;align-items:center}
+}
+
+.mobile-menu{display:none;position:fixed;top:65px;left:0;right:0;background:rgba(10,10,10,0.98);z-index:999;flex-direction:column;border-bottom:2px solid var(--gold)}
+.mobile-menu.open{display:flex!important}
+.mobile-menu a{color:var(--cream);text-decoration:none;padding:1rem 2rem;font-size:0.9rem;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,0.07);display:block}
+.mobile-menu a:hover{background:rgba(201,168,76,0.15);color:var(--gold)}
+nav img{position:relative;z-index:1}
+</style>
+</head>
+<body>
+
+<nav>
+  <img src="images/logo.png" alt="400 Gradi">
+  <ul class="nav-desktop">
+    <li><a href="#about">Über uns</a></li>
+    <li><a href="#speisekarte">Speisekarte</a></li>
+    <li><a href="#standorte">Standorte</a></li>
+    <li><a href="#bestellen">Bestellen</a></li>
+    <li><a href="https://search.google.com/local/writereview?placeid=ChIJK9eEDqBxvUcRnzrey9eGUbQ" target="_blank" class="nav-cta">⭐ Bewerten</a></li>
+  </ul>
+  <div id="menuBtn" onclick="toggleMenu()" style="display:flex;flex-direction:column;gap:6px;cursor:pointer;padding:10px;margin-left:auto"><span style="width:28px;height:3px;background:#C9A84C;display:block"></span><span style="width:28px;height:3px;background:#C9A84C;display:block"></span><span style="width:28px;height:3px;background:#C9A84C;display:block"></span></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMenu()">Über uns</a>
+  <a href="#speisekarte" onclick="closeMenu()">Speisekarte</a>
+  <a href="#standorte" onclick="closeMenu()">Standorte & Zeiten</a>
+  <a href="#bestellen" onclick="closeMenu()">🛵 Bestellen</a>
+  <a href="https://www.lieferando.de/speisekarte/400-gradi" target="_blank" onclick="closeMenu()" style="padding-left:3rem;font-size:0.78rem;opacity:0.8">↳ Lieferando – Darmstadt</a>
+  <a href="https://wolt.com/de/deu/darmstadt/restaurant/400gradi" target="_blank" onclick="closeMenu()" style="padding-left:3rem;font-size:0.78rem;opacity:0.8">↳ Wolt – Darmstadt</a>
+  <a href="https://www.ubereats.com/de/store/400gradi/ys_OZQJdXJ6JbcSvbPNIKw" target="_blank" onclick="closeMenu()" style="padding-left:3rem;font-size:0.78rem;opacity:0.8">↳ Uber Eats – Darmstadt</a>
+  <a href="https://www.lieferando.de/speisekarte/400gradi" target="_blank" onclick="closeMenu()" style="padding-left:3rem;font-size:0.78rem;opacity:0.8">↳ Lieferando – Groß-Umstadt</a>
+  <a href="https://www.ubereats.com/de/store/400gradi-gross-umstadt/MOmKyfAGVa2aM7MQWAjodw" target="_blank" onclick="closeMenu()" style="padding-left:3rem;font-size:0.78rem;opacity:0.8">↳ Uber Eats – Groß-Umstadt</a>
+  <a href="https://search.google.com/local/writereview?placeid=ChIJK9eEDqBxvUcRnzrey9eGUbQ" target="_blank" onclick="closeMenu()" style="color:var(--gold)">⭐ Google Bewerten</a>
+</div>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-award">🏆 Ausgezeichnet von Frankfurt geht aus – Top 3 Rhein-Main</p>
+    <img src="images/logo.png" alt="400 Gradi" class="hero-logo">
+    <p class="hero-title">Neapel kommt zu dir –<br>echt, leidenschaftlich, unvergesslich.</p>
+    <div class="hero-btns">
+      <a href="#speisekarte" class="btn btn-red">Speisekarte ansehen</a>
+      <a href="#standorte" class="btn btn-outline">Standorte & Zeiten</a>
+    </div>
+  </div>
+</section>
+
+<div class="award-banner">
+  🏆 <span>Platz 3</span> der besten Pizzerien im Rhein-Main-Gebiet – nach nur 6 Monaten
+</div>
+
+<section id="about" style="background:var(--dark)">
+  <div class="about-wrap">
+    <div class="about-img">
+      <img src="images/gruender.jpg" alt="José Carlos &amp; Massimo – Gründer 400 Gradi">
+    </div>
+    <div>
+      <p class="lbl">Unsere Geschichte</p>
+      <h2 class="stitle">400°C –<br>Die Temperatur der Leidenschaft</h2>
+      <p class="stext">400 Gradi wurde von zwei Freunden gegründet: José Carlos und Massimo. Sie gingen gemeinsam neapolitanische Pizza essen – und waren enttäuscht. Ihre Reaktion: Wir kriegen das besser hin.</p>
+      <p class="stext" style="margin-top:1rem">Sie holten Pizzaiolos direkt aus Italien, lernten alles von Grund auf und eröffneten 2024 ihr erstes Restaurant. Heute stehen zwei Standorte im Rhein-Main-Gebiet – und der Hunger nach mehr ist ungebrochen.</p>
+      <div class="features">
+        <div class="feat"><div class="feat-icon">🔥</div><h4>400°C Kuppelgasofen</h4><p>Pizza in 60–90 Sekunden – so wie in Neapel.</p></div>
+        <div class="feat"><div class="feat-icon">🇮🇹</div><h4>99% aus Italien</h4><p>San Marzano, Fior di Latte, Nduja – direkt importiert.</p></div>
+        <div class="feat"><div class="feat-icon">✂️</div><h4>Goldene Schere</h4><p>Jede Pizza wird am Tisch serviert.</p></div>
+        <div class="feat"><div class="feat-icon">⭐</div><h4>Platz 3 Rhein-Main</h4><p>Von Frankfurt geht aus ausgezeichnet.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gallery-wrap">
+  <div class="gallery-head">
+    <p class="lbl">Impressionen</p>
+    <h2 class="stitle">Napoli mitten in Deutschland</h2>
+  </div>
+  <div class="gallery-grid">
+    <div class="gitem"><img src="images/restaurant.jpg" alt="400 Gradi Restaurant Darmstadt"></div>
+    <div class="gitem"><img src="images/margherita.jpg" alt="Pizza Margherita"></div>
+    <div class="gitem"><img src="images/diavola.jpg" alt="Pizza Diavola"></div>
+    <div class="gitem"><img src="images/ofen2.jpg" alt="Pizza aus dem Ofen"></div>
+    <div class="gitem"><img src="images/pizza2.jpg" alt="Pizza Napoletana"></div>
+    <div class="gitem"><img src="images/antipasti.jpg" alt="Antipasti Fratelli Platte"></div>
+  </div>
+</div>
+
+<div class="deals-wrap">
+  <p class="lbl" style="color:rgba(255,255,255,0.5)">Wöchentliche Angebote</p>
+  <h2 class="stitle" style="color:white">Unsere Deals</h2>
+  <div class="deals-grid">
+    <div class="deal">
+      <p class="deal-day">Jeden Dienstag</p>
+      <h3 class="deal-title">Pizzatag</h3>
+      <p class="deal-desc">Jede Pizza nur <strong style="color:var(--gold)">10 €</strong> – Vor-Ort & Abholung an beiden Standorten!</p>
+    </div>
+    <div class="deal">
+      <p class="deal-day">Jeden Donnerstag</p>
+      <h3 class="deal-title">Ladies Day</h3>
+      <p class="deal-desc">Ein kostenloser Aperitif zu jeder Pizza für alle Damen. <strong style="color:var(--gold)">Grazie!</strong></p>
+    </div>
+  </div>
+</div>
+
+<section id="speisekarte" style="background:var(--dark)">
+  <div class="menu-wrap">
+    <p class="lbl">Was wir anbieten</p>
+    <h2 class="stitle">Unsere Speisekarte</h2>
+    <div class="menu-tabs">
+      <button class="mtab active" onclick="showTab('ant',this)">Antipasti</button>
+      <button class="mtab" onclick="showTab('pc',this)">Pizza Classic</button>
+      <button class="mtab" onclick="showTab('ps',this)">Pizza Special</button>
+      <button class="mtab" onclick="showTab('gt',this)">Getränke</button>
+    </div>
+    <div id="ant" class="mpanel active">
+      <div class="mitems">
+        <div class="mitem"><div class="mheader"><span class="mname">Bruschetta Classic</span><span class="mprice">6,90 €</span></div><p class="mdesc">Hausgemachtes Brot, Datteltomaten, Knoblauch, Basilikum, Olivenöl</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Bruschetta Parma</span><span class="mprice">9,00 €</span></div><p class="mdesc">Hausgemachtes Brot, Cherrytomaten, Basilikum, Parmaschinken</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Bruschetta Nduja</span><span class="mprice">8,50 €</span></div><p class="mdesc">Hausgemachtes Brot, Nduja, Scamorza überbacken</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Carpaccio vom Rinderfilet</span><span class="mprice">12,00 €</span></div><p class="mdesc">Hauchdünnes Rinderfilet, Parmesan, Rucola, Olivenöl</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Vitello Tonnato de Cerdo Ibérico</span><span class="mprice">13,00 €</span></div><p class="mdesc">Iberisches Schweinefilet, Thunfischcreme, Sardellen, Kapern</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Lachs Carpaccio</span><span class="mprice">13,90 €</span></div><p class="mdesc">Hauchdünnes Lachsfilet, Parmesan, Rucola, Olivenöl</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Burrata</span><span class="mprice">11,90 €</span></div><p class="mdesc">Cherrytomaten, Burrata, Basilikum, Olivenöl, hausgemachtes Brot</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Fratelli Platte für 2</span><span class="mprice">24,90 €</span></div><p class="mdesc">Parmaschinken, Oliven, Bruschetta, Büffelmozzarella, Artischocken, Bresaola, Salame Calabrese</p></div>
+      </div>
+    </div>
+    <div id="pc" class="mpanel">
+      <div class="mitems">
+        <div class="mitem"><div class="mheader"><span class="mname">Regina Margherita</span><span class="mprice">10,00 €</span></div><p class="mdesc">San Marzano DOP, Fior di Latte dei Monti, Basilikum, Olivenöl</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Bufala</span><span class="mprice">14,00 €</span></div><p class="mdesc">San Marzano DOP, Mozzarella di Bufala, Basilikum</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Diavola ★ Signature</span><span class="mprice">14,00 €</span></div><p class="mdesc">San Marzano DOP, Fior di Latte, Salame Calabrese, karamellisierte Zwiebeln</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Salame Dolce</span><span class="mprice">13,00 €</span></div><p class="mdesc">San Marzano DOP, Fior di Latte, Salame Napoli</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Prosciutto</span><span class="mprice">13,00 €</span></div><p class="mdesc">San Marzano DOP, Fior di Latte, Prosciutto cotto</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Ortolana</span><span class="mprice">14,00 €</span></div><p class="mdesc">San Marzano DOP, Fior di Latte, Mediterranes Grillgemüse, Knoblauch</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Quattro Formaggi</span><span class="mprice">14,50 €</span></div><p class="mdesc">San Marzano DOP, Fior di Latte, Scamorza, Gorgonzola, Parmesan</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Capricciosa</span><span class="mprice">14,50 €</span></div><p class="mdesc">San Marzano DOP, Fior di Latte, Prosciutto, Champignon, Artischocken, Oliven</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Marinara (vegan)</span><span class="mprice">8,50 €</span></div><p class="mdesc">San Marzano DOP, Basilikum, Oregano, Knoblauch, Olivenöl</p></div>
+      </div>
+    </div>
+    <div id="ps" class="mpanel">
+      <div class="mitems">
+        <div class="mitem"><div class="mheader"><span class="mname">Tartufo</span><span class="mprice">18,50 €</span></div><p class="mdesc">Stracciatella di Burrata, Fior di Latte, Steinpilze, Pancetta, Trüffelöl, frischer Trüffel</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Pistacchio</span><span class="mprice">16,00 €</span></div><p class="mdesc">Crema di Ricotta, Fior di Latte, Mortadella di Bologna, Pistaziensplitter, Stracciatella</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Parma</span><span class="mprice">16,00 €</span></div><p class="mdesc">San Marzano DOP, Fior di Latte, Parmaschinken, Rucola, Parmesan</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Salmone</span><span class="mprice">16,00 €</span></div><p class="mdesc">San Marzano DOP, Fior di Latte, Lachsfilet, Rucola, Parmesan</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Delizia</span><span class="mprice">16,50 €</span></div><p class="mdesc">Gefüllter Rand mit Ricotta, San Marzano DOP, Fior di Latte, Fior di Zucca, Polpettine</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Tricolore</span><span class="mprice">16,00 €</span></div><p class="mdesc">San Marzano DOP, Fior di Latte, Friarielli, Salsiccia, Tarelli napoletani</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Burrata Special</span><span class="mprice">15,00 €</span></div><p class="mdesc">San Marzano DOP, Fior di Latte, Burrata, Basilikum, Olivenöl</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Nduja</span><span class="mprice">14,00 €</span></div><p class="mdesc">San Marzano DOP, Fior di Latte, Nduja (pikante Streichwurst), Oliven, Oregano</p></div>
+      </div>
+    </div>
+    <div id="gt" class="mpanel">
+      <div class="mitems">
+        <div class="mitem"><div class="mheader"><span class="mname">Aperol Sprizz</span><span class="mprice">7,90 €</span></div></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Sarti Sprizz</span><span class="mprice">7,90 €</span></div></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Hugo</span><span class="mprice">7,90 €</span></div></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Lillet Wildberry</span><span class="mprice">7,90 €</span></div></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Maradona Sprizz (alkoholfrei)</span><span class="mprice">6,90 €</span></div><p class="mdesc">Bitter Lemon, Grapefruit, Minze, Limette</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Prosecco</span><span class="mprice">4,90 €</span></div></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Peroni 0,33l</span><span class="mprice">3,90 €</span></div></div>
+        <div class="mitem"><div class="mheader"><span class="mname">San Pellegrino 0,7l</span><span class="mprice">5,90 €</span></div></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Espresso</span><span class="mprice">2,00 €</span></div></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Cappuccino</span><span class="mprice">3,50 €</span></div></div>
+      </div>
+    </div>
+    <div style="margin-top:3rem;text-align:center">
+      <a href="speisekarte.pdf" target="_blank" class="btn btn-outline" style="display:inline-block">📄 Vollständige Speisekarte (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<section id="standorte" class="standorte-wrap">
+  <div class="standorte-head">
+    <p class="lbl">Wo wir sind</p>
+    <h2 class="stitle">Unsere Standorte</h2>
+  </div>
+  <div class="standorte-grid">
+    <div class="scard">
+      <div class="scard-head">
+        <p class="scard-badge">🏆 Platz 3 Rhein-Main · Flagship</p>
+        <h3 class="scard-name">Darmstadt</h3>
+      </div>
+      <div class="scard-body">
+        <div class="irow"><span class="iicon">📍</span><span class="itext">Erbacher Straße 5<br>64283 Darmstadt</span></div>
+        <div class="oz">
+          <div class="row closed"><span>Montag</span><span>Ruhetag</span></div>
+          <div class="row"><span>Di – Do</span><span>17:00 – 22:30</span></div>
+          <div class="row"><span>Fr & Sa</span><span>17:00 – 23:00</span></div>
+          <div class="row"><span>Sonntag</span><span>17:00 – 22:30</span></div>
+        </div>
+        <div class="slinks">
+          <a href="tel:+4961515018218" class="slink">📞 Anrufen</a>
+          <a href="https://share.google/xo6qrBSNJxNz0UpxH" target="_blank" class="slink">📍 Maps</a>
+          <a href="https://search.google.com/local/writereview?placeid=ChIJK9eEDqBxvUcRnzrey9eGUbQ" target="_blank" class="slink">⭐ Bewerten</a>
+        </div>
+      </div>
+    </div>
+    <div class="scard">
+      <div class="scard-head2">
+        <p class="scard-badge">📍 Unser erster Standort</p>
+        <h3 class="scard-name">Groß-Umstadt</h3>
+      </div>
+      <div class="scard-body">
+        <div class="irow"><span class="iicon">📍</span><span class="itext">Entengasse 2<br>64823 Groß-Umstadt</span></div>
+        <div class="oz">
+          <div class="row closed"><span>Montag</span><span>Ruhetag</span></div>
+          <div class="row"><span>Di – Sa</span><span>17:00 – 22:00</span></div>
+          <div class="row"><span>Sonntag</span><span>15:00 – 22:00</span></div>
+        </div>
+        <div class="slinks">
+          <a href="tel:+4960789160897" class="slink">📞 Anrufen</a>
+          <a href="https://share.google/9VydeBLRQWAjMg71t" target="_blank" class="slink">📍 Maps</a>
+          <a href="https://g.page/r/CY_qlQZsiP05EBM/review" target="_blank" class="slink">⭐ Bewerten</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="bestellen" class="bestellen-wrap">
+  <h2>Jetzt bestellen</h2>
+  <p>Pizza Napoletana direkt zu dir nach Hause – schnell, frisch, unvergesslich.</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:800px;margin:0 auto;text-align:left;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))">
+    <div style="background:rgba(255,255,255,0.1);padding:2rem;border:1px solid rgba(255,255,255,0.2)">
+      <p style="font-size:0.7rem;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:0.8rem">📍 Darmstadt</p>
+      <div style="display:flex;flex-direction:column;gap:0.8rem">
+        <a href="https://www.lieferando.de/speisekarte/400-gradi" target="_blank" class="dbt">🛵 Lieferando</a>
+        <a href="https://wolt.com/de/deu/darmstadt/restaurant/400gradi" target="_blank" class="dbt">🛵 Wolt</a>
+        <a href="https://www.ubereats.com/de/store/400gradi/ys_OZQJdXJ6JbcSvbPNIKw" target="_blank" class="dbt">🛵 Uber Eats</a>
+      </div>
+    </div>
+    <div style="background:rgba(255,255,255,0.1);padding:2rem;border:1px solid rgba(255,255,255,0.2)">
+      <p style="font-size:0.7rem;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:0.8rem">📍 Groß-Umstadt</p>
+      <div style="display:flex;flex-direction:column;gap:0.8rem">
+        <a href="https://www.lieferando.de/speisekarte/400gradi" target="_blank" class="dbt">🛵 Lieferando</a>
+        <a href="https://www.ubereats.com/de/store/400gradi-gross-umstadt/MOmKyfAGVa2aM7MQWAjodw" target="_blank" class="dbt">🛵 Uber Eats</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="review-wrap">
+  <div class="stars">⭐⭐⭐⭐⭐</div>
+  <h2>Hat es geschmeckt?</h2>
+  <p>Helft uns Darmstadts beste Pizzeria zu werden!</p>
+  <a href="https://search.google.com/local/writereview?placeid=ChIJK9eEDqBxvUcRnzrey9eGUbQ" target="_blank" class="btn btn-red" style="display:inline-block">⭐ Jetzt auf Google bewerten</a>
+</section>
+
+
+<section style="background:linear-gradient(135deg,#0B3F7A 0%,#1a5fa8 100%);padding:5rem 2rem;text-align:center;color:white">
+  <p style="font-size:0.75rem;letter-spacing:0.5em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:1rem">Deine Chance</p>
+  <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:400;margin-bottom:1rem;line-height:1.2">Werde Teil der<br>400 Gradi Familie</h2>
+  <p style="font-size:1rem;color:rgba(255,255,255,0.75);max-width:550px;margin:0 auto 1rem;line-height:1.8">Platz 3 Rhein-Main nach nur 6 Monaten. Zwei erfolgreiche Standorte. Ein erprobtes System das funktioniert – und du kannst Teil davon sein.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.5rem;max-width:800px;margin:2rem auto 3rem">
+    <div style="background:rgba(255,255,255,0.08);padding:1.5rem;border:1px solid rgba(201,168,76,0.3);text-align:center">
+      <p style="font-size:1.8rem;margin-bottom:0.5rem">🏆</p>
+      <p style="font-family:'Playfair Display',serif;font-size:1rem;color:#C9A84C;margin-bottom:0.3rem">Platz 3 Rhein-Main</p>
+      <p style="font-size:0.75rem;opacity:0.55;line-height:1.5">Ausgezeichnet von Frankfurt geht aus – nach nur 6 Monaten</p>
+    </div>
+    <div style="background:rgba(255,255,255,0.08);padding:1.5rem;border:1px solid rgba(201,168,76,0.3);text-align:center">
+      <p style="font-size:1.8rem;margin-bottom:0.5rem">🔥</p>
+      <p style="font-family:'Playfair Display',serif;font-size:1rem;color:#C9A84C;margin-bottom:0.3rem">400°C Kuppelgasofen</p>
+      <p style="font-size:0.75rem;opacity:0.55;line-height:1.5">Echte neapolitanische Pizza – 60 Sekunden Backzeit</p>
+    </div>
+    <div style="background:rgba(255,255,255,0.08);padding:1.5rem;border:1px solid rgba(201,168,76,0.3);text-align:center">
+      <p style="font-size:1.8rem;margin-bottom:0.5rem">🇮🇹</p>
+      <p style="font-family:'Playfair Display',serif;font-size:1rem;color:#C9A84C;margin-bottom:0.3rem">99% aus Italien</p>
+      <p style="font-size:0.75rem;opacity:0.55;line-height:1.5">San Marzano, Fior di Latte – kein Kompromiss bei Qualität</p>
+    </div>
+    <div style="background:rgba(255,255,255,0.08);padding:1.5rem;border:1px solid rgba(201,168,76,0.3);text-align:center">
+      <p style="font-size:1.8rem;margin-bottom:0.5rem">📍</p>
+      <p style="font-family:'Playfair Display',serif;font-size:1rem;color:#C9A84C;margin-bottom:0.3rem">Darmstadt & Groß-Umstadt</p>
+      <p style="font-size:0.75rem;opacity:0.55;line-height:1.5">Zwei erfolgreiche Standorte – ein erprobtes System</p>
+    </div>
+  </div>
+  <a href="mailto:info@400-gradi.de?subject=Franchise%20Anfrage%20400%20Gradi" style="display:inline-block;padding:1rem 2.5rem;background:#C9A84C;color:#111;font-size:0.85rem;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;font-family:'Lato',sans-serif;font-weight:700;transition:all 0.3s">Jetzt Franchise anfragen</a>
+  <p style="font-size:0.75rem;color:rgba(255,255,255,0.35);margin-top:1rem">Wir melden uns innerhalb von 48 Stunden</p>
+</section>
+<footer>
+  <img src="images/logo.png" alt="400 Gradi">
+  <div class="flinks">
+    <a href="#about">Über uns</a>
+    <a href="#speisekarte">Speisekarte</a>
+    <a href="#standorte">Standorte</a>
+    <a href="https://www.instagram.com/400_gradi_" target="_blank">Instagram</a>
+    <a href="mailto:info@400-gradi.de">Kontakt</a>
+    <a href="#impressum">Impressum</a>
+  </div>
+  <p class="fcopy">© 2025 400 Gradi – Pizza Napoletana | Darmstadt & Groß-Umstadt<br>info@400-gradi.de</p>
+
+<div id="impressum" style="margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.08);text-align:left;max-width:600px;margin-left:auto;margin-right:auto">
+  <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;color:rgba(255,255,255,0.6);margin-bottom:1.5rem;text-align:center;letter-spacing:0.2em;text-transform:uppercase">Impressum</h3>
+  <p style="font-size:0.82rem;color:rgba(255,255,255,0.35);line-height:2">
+    <strong style="color:rgba(255,255,255,0.5)">Angaben gemäß § 5 TMG</strong><br><br>
+    Massimo Fascetto & José Carlos Costa Gonçalves GbR<br>
+    Entengasse 2<br>
+    64823 Groß-Umstadt<br><br>
+    <strong style="color:rgba(255,255,255,0.5)">Kontakt</strong><br>
+    Telefon: +49 6151 5018218<br>
+    E-Mail: info@400-gradi.de<br><br>
+    <strong style="color:rgba(255,255,255,0.5)">Steuernummer</strong><br>
+    08 316 00310<br>
+    Finanzamt Dieburg<br><br>
+    <strong style="color:rgba(255,255,255,0.5)">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</strong><br>
+    Massimo Fascetto & José Carlos Costa Gonçalves<br>
+    Entengasse 2, 64823 Groß-Umstadt<br><br>
+    <strong style="color:rgba(255,255,255,0.5)">Haftungsausschluss</strong><br>
+    Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
+  </p>
+</div>
+</footer>
+
+<script>
+function showTab(id,el){
+  document.querySelectorAll('.mpanel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.mtab').forEach(t=>t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  el.classList.add('active');
+}
+function toggleMenu(){
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+function closeMenu(){
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+</script>
+</body>
+</html>
