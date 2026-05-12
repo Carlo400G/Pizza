@@ -235,4 +235,231 @@ footer img{height:55px;margin-bottom:1.5rem;opacity:0.75}
     <div class="gitem"><img src="margherita.jpg" alt="Pizza Margherita neapolitanisch Darmstadt"></div>
     <div class="gitem"><img src="diavola.jpg" alt="Pizza Diavola Signature 400 Gradi Darmstadt"></div>
     <div class="gitem"><img src="ofen2.jpg" alt="Pizza aus dem Kuppelgasofen 400 Grad Darmstadt"></div>
-    <div class="gitem"><img src="pizza2.jpg" a
+    <div class="gitem"><img src="pizza2.jpg" alt="Pizza Napoletana Darmstadt"></div>
+    <div class="gitem"><img src="antipasti.jpg" alt="Antipasti Fratelli Platte 400 Gradi"></div>
+  </div>
+</div>
+
+<div class="deals-wrap">
+  <p class="lbl" style="color:rgba(255,255,255,0.5)">Wöchentliche Angebote</p>
+  <h2 class="stitle" style="color:white">Unsere Deals</h2>
+  <div class="deals-grid">
+    <div class="deal">
+      <p class="deal-day">Jeden Dienstag</p>
+      <h3 class="deal-title">Pizzatag</h3>
+      <p class="deal-desc">Jede Pizza nur <strong style="color:var(--gold);font-size:1.3rem">10 €</strong> – Vor-Ort & Abholung an beiden Standorten!</p>
+    </div>
+    <div class="deal">
+      <p class="deal-day">Jeden Donnerstag</p>
+      <h3 class="deal-title">Ladies Day</h3>
+      <p class="deal-desc">Ein kostenloser Aperitif zu jeder Pizza für alle Damen. <strong style="color:var(--gold)">Grazie!</strong></p>
+    </div>
+  </div>
+</div>
+
+<section id="speisekarte" style="background:var(--dark)">
+  <div class="menu-wrap">
+    <p class="lbl">Was wir anbieten</p>
+    <h2 class="stitle">Unsere Speisekarte</h2>
+    <div class="menu-tabs">
+      <button class="mtab active" onclick="showTab('ant',this)">Antipasti</button>
+      <button class="mtab" onclick="showTab('pc',this)">Pizza Classic</button>
+      <button class="mtab" onclick="showTab('ps',this)">Pizza Special</button>
+      <button class="mtab" onclick="showTab('gt',this)">Getränke</button>
+    </div>
+    <div id="ant" class="mpanel active">
+      <div class="mitems">
+        <div class="mitem"><div class="mheader"><span class="mname">Bruschetta Classic</span><span class="mprice">6,90 €</span></div><p class="mdesc">Hausgemachtes Brot, Datteltomaten, Knoblauch, Basilikum, Olivenöl</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Bruschetta Parma</span><span class="mprice">9,00 €</span></div><p class="mdesc">Hausgemachtes Brot, Cherrytomaten, Basilikum, Parmaschinken</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Bruschetta Nduja</span><span class="mprice">8,50 €</span></div><p class="mdesc">Hausgemachtes Brot, Nduja, Scamorza überbacken</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Carpaccio vom Rinderfilet</span><span class="mprice">12,00 €</span></div><p class="mdesc">Hauchdünnes Rinderfilet, Parmesan, Rucola, Olivenöl</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Vitello Tonnato de Cerdo Ibérico</span><span class="mprice">13,00 €</span></div><p class="mdesc">Iberisches Schweinefilet, Thunfischcreme, Sardellen, Kapern</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Lachs Carpaccio</span><span class="mprice">13,90 €</span></div><p class="mdesc">Hauchdünnes Lachsfilet, Parmesan, Rucola, Olivenöl</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Burrata</span><span class="mprice">11,90 €</span></div><p class="mdesc">Cherrytomaten, Burrata, Basilikum, Olivenöl, hausgemachtes Brot</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Fratelli Platte für 2</span><span class="mprice">24,90 €</span></div><p class="mdesc">Parmaschinken, Oliven, Bruschetta, Büffelmozzarella, Artischocken, Bresaola, Salame Calabrese</p></div>
+      </div>
+    </div>
+    <div id="pc" class="mpanel">
+      <div class="mitems">
+        <div class="mitem"><div class="mheader"><span class="mname">Regina Margherita</span><span class="mprice">10,00 €</span></div><p class="mdesc">San Marzano DOP, Fior di Latte dei Monti, Basilikum, Olivenöl</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Bufala</span><span class="mprice">14,00 €</span></div><p class="mdesc">San Marzano DOP, Mozzarella di Bufala, Basilikum</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Diavola <span class="mbadge">Signature</span></span><span class="mprice">14,00 €</span></div><p class="mdesc">San Marzano DOP, Fior di Latte, Salame Calabrese, karamellisierte Zwiebeln</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Salame Dolce</span><span class="mprice">13,00 €</span></div><p class="mdesc">San Marzano DOP, Fior di Latte, Salame Napoli</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Prosciutto</span><span class="mprice">13,00 €</span></div><p class="mdesc">San Marzano DOP, Fior di Latte, Prosciutto cotto</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Ortolana</span><span class="mprice">14,00 €</span></div><p class="mdesc">San Marzano DOP, Fior di Latte, Mediterranes Grillgemüse, Knoblauch</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Quattro Formaggi</span><span class="mprice">14,50 €</span></div><p class="mdesc">San Marzano DOP, Fior di Latte, Scamorza, Gorgonzola, Parmesan</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Capricciosa</span><span class="mprice">14,50 €</span></div><p class="mdesc">San Marzano DOP, Fior di Latte, Prosciutto, Champignon, Artischocken, Oliven</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Marinara <span class="mbadge">Vegan</span></span><span class="mprice">8,50 €</span></div><p class="mdesc">San Marzano DOP, Basilikum, Oregano, Knoblauch, Olivenöl</p></div>
+      </div>
+    </div>
+    <div id="ps" class="mpanel">
+      <div class="mitems">
+        <div class="mitem"><div class="mheader"><span class="mname">Tartufo</span><span class="mprice">18,50 €</span></div><p class="mdesc">Stracciatella di Burrata, Fior di Latte, Steinpilze, Pancetta, Trüffelöl, frischer Trüffel</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Pistacchio</span><span class="mprice">16,00 €</span></div><p class="mdesc">Crema di Ricotta, Fior di Latte, Mortadella di Bologna, Pistaziensplitter, Stracciatella</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Parma</span><span class="mprice">16,00 €</span></div><p class="mdesc">San Marzano DOP, Fior di Latte, Parmaschinken, Rucola, Parmesan</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Salmone</span><span class="mprice">16,00 €</span></div><p class="mdesc">San Marzano DOP, Fior di Latte, Lachsfilet, Rucola, Parmesan</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Delizia</span><span class="mprice">16,50 €</span></div><p class="mdesc">Gefüllter Rand mit Ricotta, San Marzano DOP, Fior di Latte, Fior di Zucca, Polpettine</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Tricolore</span><span class="mprice">16,00 €</span></div><p class="mdesc">San Marzano DOP, Fior di Latte, Friarielli, Salsiccia, Tarelli napoletani</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Burrata Special</span><span class="mprice">15,00 €</span></div><p class="mdesc">San Marzano DOP, Fior di Latte, Burrata, Basilikum, Olivenöl</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Nduja</span><span class="mprice">14,00 €</span></div><p class="mdesc">San Marzano DOP, Fior di Latte, Nduja (pikante Streichwurst), Oliven, Oregano</p></div>
+      </div>
+    </div>
+    <div id="gt" class="mpanel">
+      <div class="mitems">
+        <div class="mitem"><div class="mheader"><span class="mname">Aperol Sprizz</span><span class="mprice">7,90 €</span></div></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Sarti Sprizz</span><span class="mprice">7,90 €</span></div></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Hugo</span><span class="mprice">7,90 €</span></div></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Lillet Wildberry</span><span class="mprice">7,90 €</span></div></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Maradona Sprizz (alkoholfrei)</span><span class="mprice">6,90 €</span></div><p class="mdesc">Bitter Lemon, Grapefruit, Minze, Limette</p></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Prosecco</span><span class="mprice">4,90 €</span></div></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Peroni 0,33l</span><span class="mprice">3,90 €</span></div></div>
+        <div class="mitem"><div class="mheader"><span class="mname">San Pellegrino 0,7l</span><span class="mprice">5,90 €</span></div></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Espresso</span><span class="mprice">2,00 €</span></div></div>
+        <div class="mitem"><div class="mheader"><span class="mname">Cappuccino</span><span class="mprice">3,50 €</span></div></div>
+      </div>
+    </div>
+    <div class="menu-pdf">
+      <a href="speisekarte.pdf" target="_blank">📄 Vollständige Speisekarte als PDF</a>
+    </div>
+  </div>
+</section>
+
+<div class="standorte-wrap" id="standorte">
+  <div class="standorte-head">
+    <p class="lbl">Wo wir sind</p>
+    <h2 class="stitle">Unsere Standorte</h2>
+  </div>
+  <div class="standorte-grid">
+    <div class="scard">
+      <div class="scard-head">
+        <div class="scard-badge">🏆 Platz 3 Rhein-Main · Flagship</div>
+        <div class="scard-name">Darmstadt</div>
+      </div>
+      <div class="scard-body">
+        <div class="scard-addr">📍 Erbacher Straße 5<br>64283 Darmstadt</div>
+        <p class="oz-title">Öffnungszeiten</p>
+        <div class="oz-row"><span class="oz-day">Montag</span><span class="oz-closed">Ruhetag</span></div>
+        <div class="oz-row"><span class="oz-day">Di – Do</span><span class="oz-time">17:00 – 22:30</span></div>
+        <div class="oz-row"><span class="oz-day">Fr & Sa</span><span class="oz-time">17:00 – 23:00</span></div>
+        <div class="oz-row"><span class="oz-day">Sonntag</span><span class="oz-time">17:00 – 22:30</span></div>
+        <div class="slinks">
+          <a href="tel:+4961515018218" class="slink slink-call">📞 Anrufen</a>
+          <a href="https://share.google/xo6qrBSNJxNz0UpxH" target="_blank" class="slink">📍 Maps</a>
+          <a href="https://search.google.com/local/writereview?placeid=ChIJK9eEDqBxvUcRnzrey9eGUbQ" target="_blank" class="slink">⭐ Bewerten</a>
+        </div>
+      </div>
+    </div>
+    <div class="scard">
+      <div class="scard-head2">
+        <div class="scard-badge">📍 Unser erster Standort</div>
+        <div class="scard-name">Groß-Umstadt</div>
+      </div>
+      <div class="scard-body">
+        <div class="scard-addr">📍 Entengasse 2<br>64823 Groß-Umstadt</div>
+        <p class="oz-title">Öffnungszeiten</p>
+        <div class="oz-row"><span class="oz-day">Montag</span><span class="oz-closed">Ruhetag</span></div>
+        <div class="oz-row"><span class="oz-day">Di – Sa</span><span class="oz-time">17:00 – 22:00</span></div>
+        <div class="oz-row"><span class="oz-day">Sonntag</span><span class="oz-time">15:00 – 22:00</span></div>
+        <div class="slinks">
+          <a href="tel:+4960789160897" class="slink slink-call">📞 Anrufen</a>
+          <a href="https://share.google/9VydeBLRQWAjMg71t" target="_blank" class="slink">📍 Maps</a>
+          <a href="https://g.page/r/CY_qlQZsiP05EBM/review" target="_blank" class="slink">⭐ Bewerten</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bestellen-wrap" id="bestellen">
+  <h2>Jetzt bestellen</h2>
+  <p>Pizza Napoletana direkt zu dir nach Hause – frisch, schnell, unvergesslich.</p>
+  <div class="delivery-cols">
+    <div class="dcol">
+      <h3>📍 Darmstadt</h3>
+      <div class="dbtns">
+        <a href="https://www.lieferando.de/speisekarte/400-gradi" target="_blank" class="dbt">🛵 Lieferando</a>
+        <a href="https://wolt.com/de/deu/darmstadt/restaurant/400gradi" target="_blank" class="dbt">🛵 Wolt</a>
+        <a href="https://www.ubereats.com/de/store/400gradi/ys_OZQJdXJ6JbcSvbPNIKw" target="_blank" class="dbt">🛵 Uber Eats</a>
+      </div>
+    </div>
+    <div class="dcol">
+      <h3>📍 Groß-Umstadt</h3>
+      <div class="dbtns">
+        <a href="https://www.lieferando.de/speisekarte/400gradi" target="_blank" class="dbt">🛵 Lieferando</a>
+        <a href="https://www.ubereats.com/de/store/400gradi-gross-umstadt/MOmKyfAGVa2aM7MQWAjodw" target="_blank" class="dbt">🛵 Uber Eats</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="franchise-wrap" id="franchise">
+  <div class="franchise-inner">
+    <div>
+      <p class="lbl">Deine Chance</p>
+      <h2 class="stitle">Werde Teil der<br>400 Gradi Familie</h2>
+      <p class="stext">Platz 3 Rhein-Main nach nur 6 Monaten. Zwei erfolgreiche Standorte. Ein erprobtes System das funktioniert – und du kannst Teil davon sein.</p>
+      <div class="franchise-stats">
+        <div class="fstat"><div class="fstat-num">2</div><div class="fstat-label">Standorte</div></div>
+        <div class="fstat"><div class="fstat-num">#3</div><div class="fstat-label">Rhein-Main</div></div>
+        <div class="fstat"><div class="fstat-num">400°</div><div class="fstat-label">Kuppelgasofen</div></div>
+        <div class="fstat"><div class="fstat-num">99%</div><div class="fstat-label">aus Italien</div></div>
+      </div>
+    </div>
+    <div class="franchise-form">
+      <h3>Franchise anfragen</h3>
+      <p>Interesse an einem eigenen 400 Gradi Standort? Schreib uns – wir melden uns innerhalb von 48 Stunden mit allen Informationen zu unserem Franchise-System.</p>
+      <a href="mailto:info@400-gradi.de?subject=Franchise%20Anfrage%20400%20Gradi&body=Hallo%2C%0A%0AIch%20interessiere%20mich%20f%C3%BCr%20ein%20400%20Gradi%20Franchise.%0A%0AName%3A%0AStadt%2FRegion%3A%0ATelefon%3A%0A%0ANachricht%3A">✉️ Jetzt Franchise anfragen</a>
+      <p class="franchise-note">Wir antworten innerhalb von 48 Stunden</p>
+    </div>
+  </div>
+</div>
+
+<div class="review-wrap">
+  <div class="stars">⭐⭐⭐⭐⭐</div>
+  <h2>4,5 von 5</h2>
+  <p>Über 145 Google-Bewertungen · Darmstadt</p>
+  <a href="https://search.google.com/local/writereview?placeid=ChIJK9eEDqBxvUcRnzrey9eGUbQ" target="_blank" class="review-btn">⭐ Jetzt auf Google bewerten</a>
+</div>
+
+<footer>
+  <img src="logo.png" alt="400 Gradi">
+  <div class="flinks">
+    <a href="#about">Über uns</a>
+    <a href="#speisekarte">Speisekarte</a>
+    <a href="#standorte">Standorte</a>
+    <a href="#franchise">Franchise</a>
+    <a href="mailto:info@400-gradi.de">Kontakt</a>
+    <a href="#impressum">Impressum</a>
+  </div>
+  <div class="fsocial">
+    <a href="https://www.instagram.com/400_gradi_" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@400_gradi" target="_blank">TikTok</a>
+  </div>
+  <p class="fcopy">© 2025 400 Gradi – Pizza Napoletana | Darmstadt & Groß-Umstadt · info@400-gradi.de</p>
+  <div class="impressum" id="impressum">
+    <h4>Impressum</h4>
+    <strong>Angaben gemäß § 5 TMG</strong><br>
+    Massimo Fascetto & José Carlos Costa Gonçalves GbR<br>
+    Entengasse 2, 64823 Groß-Umstadt<br><br>
+    <strong>Kontakt</strong><br>
+    Telefon: +49 6151 5018218<br>
+    E-Mail: info@400-gradi.de<br><br>
+    <strong>Steuernummer</strong><br>
+    08 316 00310 · Finanzamt Dieburg<br><br>
+    <strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</strong><br>
+    Massimo Fascetto & José Carlos Costa Gonçalves, Entengasse 2, 64823 Groß-Umstadt
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
+function closeMenu(){document.getElementById('mobileMenu').classList.remove('open')}
+function showTab(id,btn){
+  document.querySelectorAll('.mpanel').forEach(p=>p.classList.remove('active'))
+  document.querySelectorAll('.mtab').forEach(b=>b.classList.remove('active'))
+  document.getElementById(id).classList.add('active')
+  btn.classList.add('active')
+}
+</script>
+</body>
+</html>
